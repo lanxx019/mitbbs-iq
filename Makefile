@@ -1,9 +1,10 @@
 all: main
 
-main: questions.pdf clean
+main: questions.pd clean
 
-questions.pdf: questions.tex
+questions.pd: questions.tex
 	pdflatex questions.tex
+	cp questions.pdf questions.pd
 
 clean:
 	rm -rf *.aux
