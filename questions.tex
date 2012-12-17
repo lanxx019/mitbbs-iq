@@ -1,0 +1,1020 @@
+\documentclass[a4paper]{article}
+\usepackage{CJKutf8}
+\usepackage{listings}
+\lstset{basicstyle=\ttfamily}
+\usepackage{dejavu}
+\usepackage[T1]{fontenc}
+\usepackage{xparse}
+\usepackage{xifthen}
+\usepackage{hyperref}
+\usepackage{url}
+\usepackage[top=0.75in,bottom=0.75in,left=0.75in,right=0.75in]{geometry}
+
+\NewDocumentEnvironment{Q}{o m}{
+	\item
+		\IfNoValueTF{#1}
+			{\relax}
+			{\textnormal{[}\textbf{#1}\textnormal{]}}
+}{
+
+	\ifthenelse{\isempty{#2}}
+		{\relax}
+		{\href{#2}{Link}\\}
+
+}
+
+\newcommand{\ilcode}[1]{
+	\framebox[\width]{\texttt{#1}}
+}
+
+\title{Questions}
+\author{Bin Lan \textless lanbin@gmail.com \textgreater}
+\date{11/27/2012}
+
+\begin{document}
+\maketitle
+\begin{CJK}{UTF8}{gbsn}
+\begin{enumerate}
+
+\begin{Q}[Microsoft]{http://www.mitbbs.com/article_t1/JobHunting/32267699_0_1.html}
+一个String当中，求出现多于一次的最长的substring。\\
+eg: "abcabcaacb" -> "abc"\\
+eg: "aababa" -> "aba"
+\end{Q}
+
+\begin{Q}[Microsoft]{http://www.mitbbs.com/article_t1/JobHunting/32267699_0_1.html}
+string edit distance的递归解法。
+\end{Q}
+
+\begin{Q}[Amazon]{http://www.mitbbs.com/article_t/JobHunting/32259233.html}
+给两个ascend排序的integer array，找出他们的union，并且descend排序。
+\end{Q}
+
+\begin{Q}[Facebook]{http://www.mitbbs.com/article_t/JobHunting/32268159.html}
+为移动应用设计一自动推荐地点的系统 displays a list of locations recommended by to each client. 你可以考虑是同一类的地点，比如旅游或餐馆，也可以in general的locations. 
+\end{Q}
+
+\begin{Q}{http://www.mitbbs.com/article_t/JobHunting/32266793.html}
+	2个BST，按大小顺序打印两棵树的所有节点。
+\end{Q}
+
+\begin{Q}[Cloudera]{http://www.mitbbs.com/article_t/JobHunting/32058461.html}
+Write a program that takes an integer and prints out all ways to multiply smaller integers that equal the original number, without repeating sets of factors.  In other words, if your output contains $4 * 3$, you should not print out $3 * 4$ again as that would be a repeating set.  Note that this is not asking for prime factorization only. Also, you can assume that the input integers are reasonable in size; correctness is more important than efficiency.
+\end{Q}
+
+\begin{Q}{http://www.mitbbs.com/article_t/JobHunting/32267935.html}
+给定\ilcode{bool isWord(string s)} create function to print all words based on a string.\\
+For example, input: ``thisisdesktop''\\
+output is: ``this is desk top'', ``this is desktop''
+\end{Q}
+
+\begin{Q}[Facebook]{http://www.mitbbs.com/article_t/JobHunting/32268547.html}
+给一个$N$个node的BST，给一个$key$，返回与$key$最接近的$m$个node$(m<N)$.
+\end{Q}
+
+\begin{Q}[Facebook]{http://www.mitbbs.com/article_t/JobHunting/32268547.html}
+用一个数组来表示二维数组，但是每一行的元素个数可以不同，实现get，set函数。
+\end{Q}
+
+\begin{Q}{http://www.mitbbs.com/article_t/JobHunting/32263975.html}
+Give a list of events in the following structure. Set the conflict flag to true if the event conflicts with any other event in the list.
+\begin{lstlisting}
+class Event
+{
+    int start;
+    int end;
+    bool conflict;
+}
+\end{lstlisting}
+\end{Q}
+
+\begin{Q}{http://www.mitbbs.com/article_t/JobHunting/32263975.html}
+给你一本其他国家语言的字典。其中的单词是按照这个国家的语言的字母顺序排序的。输出这个国家的语言的字母顺序。
+\end{Q}
+
+\begin{Q}[Google]{http://www.mitbbs.com/article_t1/JobHunting/32262719_0_1.html}
+两个不知长度的 int 数组，实现相加。
+\end{Q}
+
+\begin{Q}{http://www.mitbbs.com/article_t/JobHunting/32266691.html}
+给一字典,求其中某单词的最短缩写。比如internationalization可以缩写为i18n而不产生歧义。\\
+举例：一字典有6个单词：\\
+hello\\
+world\\
+would\\
+lord\\
+hell\\
+language\\
+依次可以缩写为\\
+hello -> 4o or h4\\
+world -> 2r2\\
+would -> 2u2\\
+lord -> l3 or 3d\\
+hell -> 3l or h3\\
+language -> 8
+\end{Q}
+
+\begin{Q}[Google]{http://www.mitbbs.com/article_t/JobHunting/32026399.html}
+编程题： 有一个\ilcode{observer}类，监视另一个类\ilcode{foo}的成员变量的值，每当那个值被修改，就要调用该\ilcode{observer.updated()}方法。需要实现\ilcode{foo.register(ob)}，\ilcode{foo.unregister(ob)}，\ilcode{foo.changeValue(newvalue)}。要考虑thread safe。
+\end{Q}
+
+\begin{Q}[Google]{http://www.mitbbs.com/article_t/JobHunting/32026403.html}
+Boggle game。从一个字符开始找邻居字符然后继续找，形成一个word。条件是，形成了word之后要继续找，因为可能有更长的word。一旦用了一个字符以后，就不可以重复使用了。
+\end{Q}
+
+\begin{Q}[Amazon]{http://www.mitbbs.com/article_t/JobHunting/32026413.html}
+Binary Tree的Serialization和Deserialization, 随便用什么方法实现。
+\end{Q}
+
+\begin{Q}[Amazon]{http://www.mitbbs.com/article_t/JobHunting/32026413.html}
+Large file, multiple lines, how to get any line in equal probablity, 文件
+太大内存无法装入。
+\end{Q}
+
+\begin{Q}[Amazon]{http://www.mitbbs.com/article_t/JobHunting/32026413.html}
+用pre-order in-order sequence重构binary tree.
+\end{Q}
+
+\begin{Q}[Bloomberg]{http://www.mitbbs.com/article_t/JobHunting/32062921.html}
+一个矩阵行列都是递增序， 查找一个数
+\end{Q}
+
+\begin{Q}[Amazon]{http://www.mitbbs.com/article_t/JobHunting/31376671.html}
+一个大楼,10层,4个电梯,怎么设计类来实现这样一个系统?
+\end{Q}
+
+\begin{Q}[Google]{http://www.mitbbs.com/article_t/JobHunting/32061173.html}
+Suppose you are given a dictionary of words based on an alphabet with a fixed number of characters. Please write a method/function which will find the longest word in the dictionary such that it can be built from successively adding a single character to an existing word in the dictionary (in any location). For instance, ``a'' -> ``at'' -> ``cat'' -> ``chat'' -> ``chart''.
+\end{Q}
+
+\begin{Q}[Facebook]{http://www.mitbbs.com/article_t/JobHunting/32061183.html}
+Given an array A of positive integers. Convert it to a sorted array with minimum cost. The only valid operation are:\\
+1) Decrement with cost = 1\\
+2) Delete an element completely from the array with cost = value of element
+\end{Q}
+
+\begin{Q}{http://www.mitbbs.com/article_t/JobHunting/32064107.html}
+两根不均匀的绳子，每根单独燃烧，可以燃烧一个小时。请问如何: 根据这个性质，给出45分钟的时间段？
+\end{Q}
+
+\begin{Q}[Amazon]{http://www.mitbbs.com/article_t/JobHunting/32067899.html}
+求树的最大宽度。
+\end{Q}
+
+\begin{Q}[Facebook]{http://www.mitbbs.com/article_t/JobHunting/32070393.html}
+一个很大的文件 怎么去掉duplicate
+\end{Q}
+
+\begin{Q}[Facebook]{http://www.mitbbs.com/article_t/JobHunting/32068265.html}
+Clone a graph
+\end{Q}
+
+\begin{Q}[Google]{http://www.mitbbs.com/article_t/JobHunting/32068175.html}
+Given $P$ machines, each containing an array of $N$ elements, find the medium of the array resulted by concatenating all the arrays on the machines. You cannot move data across machines.
+\end{Q}
+
+\begin{Q}[Amazon]{http://www.mitbbs.com/article_t/JobHunting/32071251.html}
+给一个二叉树，如何把它转成他的mirro image。
+\end{Q}
+
+\begin{Q}{http://www.mitbbs.com/article_t/JobHunting/32070295.html}
+找二叉树两个最大的相同子树。
+\end{Q}
+
+\begin{Q}[Bloomberg]{http://www.mitbbs.com/article_t/JobHunting/32075437.html}
+Find minimum number of characters that need to be inserted into a string (anywhere in the string) to make it a palindrome.
+\end{Q}
+
+\begin{Q}[Google]{http://www.mitbbs.com/article_t/JobHunting/32078587.html}
+iterator has only \ilcode{bool hasNext()} and \ilcode{T next()} method, write a wrapper for iterator, to support \ilcode{peek()}.
+\end{Q}
+
+\begin{Q}{http://www.mitbbs.com/article_t/JobHunting/32074175.html}
+Given a sequence of data (it may have duplicates), a fixed-sized moving window, move the window at each iteration from the start of the data sequence, such that \\
+(1) the oldest data element is removed from the window and a new data element is pushed into the window\\
+(2) find the median of the data inside the window at each moving.
+\end{Q}
+
+\begin{Q}[Amazon, Microsoft]{http://www.mitbbs.com/article_t/JobHunting/32080539.html}
+就是将数组里的负数排在数组的前面，正数排在数组的后面。但不改变原先负数和正数的排列顺序。\\
+例：input: -5，2，-3, 4，-8，-9, 1, 3，-10\\
+output: -5, -3, -8, -9, -10, 2, 4, 1, 3
+\end{Q}
+
+\begin{Q}{http://www.mitbbs.com/article_t/JobHunting/32082935.html}
+3个已经排序的整数数列，找到common elements
+\end{Q}
+
+\begin{Q}[Google]{http://www.mitbbs.com/article_t/JobHunting/32079701.html}
+Given an input string and an order string, e.g., ``house'' and ``soup'', print out characters in input string according to character order in order string. For characters in input string but not in order string, output them in the end, their relative order doesn't matter.
+
+So for ``house'', ``souhe'' and ``soueh'' are valid outputs.
+\end{Q}
+
+\begin{Q}[Google]{http://www.mitbbs.com/article_t/JobHunting/32078073.html}
+You are given a String number containing the digits of a phone number (the number of digits, n, can be any positive integer) . To help you memorize the number, you want to divide it into groups of contiguous digits. Each group must contain exactly 2 or 3 digits. There are three kinds of groups:
+
+• Excellent: A group that contains only the same digits. For example, 000 or 77.
+
+• Good: A group of 3 digits, 2 of which are the same. For example, 030, 229 or 166.
+
+• Usual: A group in which all the digits are distinct. For example, 123 or 90.
+
+The quality of a group assignment is defined as 2 × (number of excellent groups) + (number of good groups), Divide the number into groups such that the quality is maximized. Design an efficient algorithm to return the solution that maximizes the quality.
+\end{Q}
+
+\begin{Q}{http://www.mitbbs.com/article_t/JobHunting/32088539.html}
+Write a function that takes an array of five integers, each of which is between 1 and 10, and returns the number of combination of those integers that sum to 15. 
+
+For example, calling the function with the array [1, 2, 3, 4, 5] should return 1, while calling it with [5, 5, 10, 2, 3] should return 4 (5 + 10, 5 + 10, 5 + 5 + 2 + 3, 10 + 2 + 3).
+\end{Q}
+
+\begin{Q}{http://www.mitbbs.com/article_t/JobHunting/32089027.html}
+Given a set of n integers, each in the range $0 \ldots K$, partition the integers into two subsets to minimize $|S1 - S2|$, where $S1$ and $S2$ denote the sums of the elements in each of the two subsets.
+\end{Q}
+
+\begin{Q}[Facebook]{http://www.mitbbs.com/article_t/JobHunting/32063239.html}
+Giving lots of intervals $[a_i, b_i]$, find a point intersect with the most number of intervals
+\end{Q}
+
+\begin{Q}{http://www.mitbbs.com/article_t1/JobHunting/32096259_0_1.html}
+一个大数组，在1到25000之间，只有4K memory, 打印出其中正好只出现过一次的数。没出现过，出现过2次，3次，或更多，都不打印。
+\end{Q}
+
+\begin{Q}[Google]{http://www.mitbbs.com/article_t/JobHunting/32104785.html}
+Given a dictionary and a string, write a program to output the valid words while minimizing the numbers of skipped characters. The substring that consists of a valid word in the dictionary may swap the characters. For example, Given a dictionary d = {window, cat} and a string ``iwndowdcta'', the output is ``window cat''. In this case, there is only one number of skipped character which is 'd'. 
+\end{Q}
+
+\begin{Q}[Microsoft]{http://www.mitbbs.com/article_t/JobHunting/32081285.html}
+How to find if a number is present equal to or more than $n / 2$ times in an array of size $n$? 
+\end{Q}
+
+\begin{Q}{http://www.mitbbs.com/article_t/JobHunting/32110581.html}
+given an array of n unsorted integers and each number is at most k positions away from its final sorted position, give an efficient sorting algorithm.
+\end{Q}
+
+\begin{Q}[Amazon]{http://www.mitbbs.com/article_t/JobHunting/32112869.html}
+假设你是一个剧院的IT Manager，有一天你的老板跑来问你，最近有很多乐队要来演出，你能告诉我如何安排么？最多满足多少个乐队的要求？只有一个舞台。每个乐队演出的价格一样，需要最优解。
+\end{Q}
+
+\begin{Q}{http://www.mitbbs.com/article_t/JobHunting/32113351.html}
+在一个大串中查找和另外一个字符串是anagram的子串:
+\begin{lstlisting}
+GetAnagram(``abcdbcsdaqdbahs'', ``scdcb'') ==> ``cdbcs''
+\end{lstlisting}
+\end{Q}
+
+\begin{Q}[Google]{http://www.mitbbs.com/article_t1/JobHunting/32113349_0_1.html}
+处理一个字符串，删除里面所有的A，double所有的B
+
+例子，输入 CAABD, 输出是CBBD
+\end{Q}
+
+\begin{Q}[Google]{http://www.mitbbs.com/article_t/JobHunting/32076263.html}
+how to design a queue, in addition to \ilcode{insert()}, \ilcode{delete()}, also has a function \ilcode{min()} which returns the minumum element? Can you do all functions in $O(1)$ time?
+\end{Q}
+
+\begin{Q}[Amazon]{http://www.mitbbs.com/article_t/JobHunting/32118339.html}
+Write the code to count number of 1's in binary expression of a given integer.
+\end{Q}
+
+\begin{Q}[Amazon]{http://www.mitbbs.com/article_t/JobHunting/32118339.html}
+Design file system. How about adding symbolic link.
+\end{Q}
+
+\begin{Q}[Bloomberg]{http://www.mitbbs.com/article_t/JobHunting/32118339.html}
+8个球有一个球比其他的重。用天平最少称几次能找出来。
+\end{Q}
+
+\begin{Q}[Bloomberg]{http://www.mitbbs.com/article_t/JobHunting/32118339.html}
+1-100共100个数missing 1个，如何找出来；missing 2个呢？
+\end{Q}
+
+\begin{Q}[Amazon]{http://www.mitbbs.com/article_t/JobHunting/32123673.html}
+怎么实现\ilcode{boolean isBST(Node *root)}? 
+\end{Q}
+
+\begin{Q}[Amazon]{http://www.mitbbs.com/article_t/JobHunting/32123951.html}
+Stream of characters, at any point you should be able to answer what is the most recent character that happened only once
+\end{Q}
+
+\begin{Q}[Google]{http://www.mitbbs.com/article_t/JobHunting/32119891.html}
+Three coke machines. Each one has two values $min$ and $max$, which means if you get coke from this machine it will load you a random volume in the range $[min, max]$. Given a cup size $n$ and minimum soda volume $m$, show if it's possible to make it from these machines.
+\end{Q}
+
+\begin{Q}[Google]{http://www.mitbbs.com/article_t/JobHunting/32122887.html}
+Given a string of sorted integers, e.g. ``1 52 69 456789 994546566'' and a  a number e.g. 69. You need to tell if it is in the input, e.g. 69=>true.
+\end{Q}
+
+\begin{Q}[Amazon]{http://www.mitbbs.com/article_t/JobHunting/32137389.html}
+for an integer, find out all the prime factors whose product is the integer itself, eg: $12 = 2*2*3$. Print out those factors in a list.
+\end{Q}
+
+\begin{Q}[Amazon]{http://www.mitbbs.com/article_t/JobHunting/32069949.html}
+Check if a binary tree is symmetric
+\end{Q}
+
+\begin{Q}[Google]{http://www.mitbbs.com/article_t/JobHunting/32152557.html}
+一个数组$a_1,a_2,a_3\ldots a_n,b_1,b_2,b_3\ldots b_n$, 怎么in place地转化成$a_1,b_1,a_2,b_2,a_3,b_3 \ldots a_n,b_n$.
+\end{Q}
+
+\begin{Q}{http://www.mitbbs.com/article_t/JobHunting/32156015.html}
+N组整数，每组都由小到大排列，如何快速找出N组都有的最大数？
+\end{Q}
+
+\begin{Q}[Linkedln]{http://www.mitbbs.com/article_t/JobHunting/32160693.html}
+Find a number in a matrix which is sorted by row and column
+\end{Q}
+
+\begin{Q}[Facebook]{http://www.mitbbs.com/article_t/JobHunting/32162111.html}
+Given preorder of a binary tree, print out all the binary trees.
+\end{Q}
+
+\begin{Q}[Amazon]{http://www.mitbbs.com/article_t/JobHunting/32167761.html}
+Given a list of points in 2D and a single reference point, find k nearest neighbors.
+\end{Q}
+
+\begin{Q}[Facebook]{http://www.mitbbs.com/article_t/JobHunting/32112363.html}
+Given an array $A$ of positive integers. Convert it to a sorted array with minimum cost. The only valid operation are:
+
+1) Decrement with cost = 1
+
+2) Delete an element completely from the array with cost = value of element
+\end{Q}
+
+\begin{Q}{http://www.mitbbs.com/article_t/JobHunting/32173227.html}
+$4 * 4$的矩阵，左上走到右下，可以走上下左右四个方向，不能走走过的格子，多少种unique的走法？
+\end{Q}
+
+\begin{Q}[Microsoft]{http://www.mitbbs.com/article_t1/JobHunting/32164103_0_1.html}
+有$2*N$个文件，文件的大小保存在\ilcode{size[2*N]}中。然后想要分成$N$份（每一份可以有1或者多个文件),要使这N份中的文件size之和的最大值最小，如何实现?
+\end{Q}
+
+\begin{Q}[Google]{http://www.mitbbs.com/article_t/JobHunting/32175465.html}
+找到字符串A在字符串B中出现的次数，可以重复使用字母，比如 A: aba  B: ababa, 那么返回2.
+\end{Q}
+
+\begin{Q}[Google]{http://www.mitbbs.com/article_t/JobHunting/32175265.html}
+告诉我一个游戏，叫做“生或者死”，在一个棋盘上，规则如下：
+
+每格有两种状态：生，或者 死
+
+每一轮，如果有少于两个邻居是活着的，这格就死掉
+
+如果刚好有两个邻居活着，这格保持原有状态
+
+如果有三个邻居活着，这格可以重生，就是如果原来是死的，现在活过来了
+
+如果有三个以上邻居，这格就被挤死了
+
+要在白板上写每轮如何更新整个棋盘的状态
+\end{Q}
+
+\begin{Q}[Amazon]{http://www.mitbbs.com/article_t/JobHunting/32173223.html}
+给一个无向图找出给定起始点到给定结束点的所有最短路径并打印
+\end{Q}
+
+\begin{Q}[Google]{http://www.mitbbs.com/article_t/JobHunting/32186343.html}
+设计一个集合数据结构(set,只存unique的value)要求能在$O(1)$时间内insert，delete，random query(比如目前set中有n个元素，给一个介于1到n的随机数k，可以在O(1)时间内返回第k个value)
+\end{Q}
+
+\begin{Q}{http://www.mitbbs.com/article_t/JobHunting/32186573.html}
+Imagine there is a square matrix with $n * n$ cells. Each cell is either filled with a black pixel or a white pixel. Design an algorithm to find the maximum subsquare such that all four borders are filled with black pixels;
+\end{Q}
+
+\begin{Q}{http://www.mitbbs.com/article_t/JobHunting/32191139.html}
+给一个包含数字的数组，求该数组的最长的子数组（这里说的子数组是下标连续），要求这个子数组中的数组是一个连续的序列（不需要排好序）。
+
+例如，给一个数组$[4,5,1,5,7,6,8,4,1]$， 最长的满足条件的子数组是$[5,7,6,8,4]$。因为该子数组中，$5,7,6,8,4$是一个连续的序列。
+\end{Q}
+
+\begin{Q}{http://www.mitbbs.com/article_t/JobHunting/32190689.html}
+两个排序好的数组，求和最小的M 个pair, 比如$A={1, 2, 4, 5, 6}$, $B={3, 5, 7, 9}$, $m=3$, 那么Results就是$(1, 3),(2, 3),(1, 5)$
+\end{Q}
+
+\begin{Q}[Microsoft]{http://www.mitbbs.com/article_t/JobHunting/32188347.html}
+Describe a data structure for which 
+
+\ilcode{getValue(int index)}
+
+\ilcode{setValue(int index, int value)}
+
+\ilcode{setAllValues(int value)} 
+
+are all $O(1)$.
+\end{Q}
+
+\begin{Q}{http://www.mitbbs.com/article_t/JobHunting/32193593.html}
+Given an array of 32bit unsigned integers in which every number appears exactly twice except three of them, find those three numbers in $O(n)$ time using $O(1)$ extra space. The input array is read-only. What if there are $k$ exceptions instead of 3?
+\end{Q}
+
+\begin{Q}{http://www.mitbbs.com/article_t/JobHunting/32189139.html}
+the longest repeated substring problem is the problem of finding the longest substring of a string that occurs at least twice.
+\end{Q}
+
+\begin{Q}[Amazon]{http://www.mitbbs.com/article_t/JobHunting/32189053.html}
+给定两个二叉排序树，可能结构不同，问是否他们具有完全相同的值。
+\end{Q}
+
+\begin{Q}[Google]{http://www.mitbbs.com/article_t/JobHunting/32189053.html}
+给定n个数，每个数有一个出现得概率，这样就形成了一个分布，根据这个分布，生成k个数。
+\end{Q}
+
+\begin{Q}[Google]{http://www.mitbbs.com/article_t/JobHunting/32189053.html}
+有一个很长的DNA串，给定一个短的DNA串，问你短的子串是否出现在长DNA串中。延伸问题,如果只是找和短串相似的长串中子串怎么办？ 延伸问题二，加入长串太长了，内存放不下怎么办?
+\end{Q}
+
+\begin{Q}[Google]{http://www.mitbbs.com/article_t/JobHunting/32196075.html}
+搜索提示是怎么做的?
+
+比如你输入一个字母A, 马上就会提示AMAZON
+
+问提示的内容, 排序, 和数据结构的实现
+\end{Q}
+
+\begin{Q}{http://www.mitbbs.com/article_t/JobHunting/32195851.html}
+unordered array of size $N$, already know more than half of the elements are number $x$(duplicate). the rest of the array is unknown. find the number $x$ efficiently (that means $O(N)$)
+\end{Q}
+
+\begin{Q}{http://www.mitbbs.com/article_t/JobHunting/32194831.html}
+给一个int数组, 求出所有和为0的子数组
+\end{Q}
+
+\begin{Q}{http://www.mitbbs.com/article_t/JobHunting/32150635.html}
+Given an array, find the longest subarray which the sum of the subarray less or equal then the given MaxSum.
+\end{Q}
+
+\begin{Q}[Facebook]{http://www.mitbbs.com/article_t/JobHunting/32198853.html}
+写一个二叉树中序遍历的iterator
+\end{Q}
+
+\begin{Q}{http://www.mitbbs.com/article_t/JobHunting/32199747.html}
+给定一个数字数组 ，其中每个元素是从末端数小于原数组中该元素的个数。求原数组。原数组中元素是从$1$到$n$。Example:
+
+原数组$4,1, 3, 2$
+
+Count array  $3, 0, 1, 0$
+\end{Q}
+
+\begin{Q}[Google]{http://www.mitbbs.com/article_t/JobHunting/32197927.html}
+Find a connection between two people if there is one, or return false. Everyone has father and mother and the connection means if there are any common relatives.
+\end{Q}
+
+\begin{Q}[Amazon]{http://www.mitbbs.com/article_t/JobHunting/32195497.html}
+怎么快速从一堆超大log文件中找出所有的Customer ID。
+\end{Q}
+
+\begin{Q}[Facebook]{http://www.mitbbs.com/article_t/JobHunting/32172205.html}
+You are given N ranges of date offsets when N employees are present in an organization. Something like
+
+1-4 (i.e. employee will come on 1st, 2nd, 3rd and 4th day )
+
+2-6
+
+8-9
+
+..
+
+1-14
+
+You have to organize an event on minimum number of days such that each employee can attend the event at least twice. Write an algorithm (there is apparently an $O(n)$ algorithm for this).
+\end{Q}
+
+\begin{Q}[Facebook]{http://www.mitbbs.com/article_t/JobHunting/32101029.html}
+给你一个\ilcode{char* read4096()}的API，一次返回小于或者等于4096个字符。如果返回是小于4096个字符，意味着已经读到文件末尾`\textbackslash 0'。
+
+用\ilcode{read4096()}这个API，写一个\ilcode{char* readline()}的function。要求：
+
+1) \ilcode{readline()} returns when reading `\textbackslash n' or `\textbackslash 0'.
+
+2) \ilcode{readline()} may be called multiple times on a file, the return value should be correct.
+
+3) \ilcode{readline()} may return char array longer than 4096 chars.
+\end{Q}
+
+\begin{Q}[Google]{http://www.mitbbs.com/article_t/JobHunting/32203533.html}
+一个大型cluster 包括thousands of nodes.  需要定期upgrade 每个server跑的 OS image (也就是重装).  如何设计一个方案加速该过程。
+\end{Q}
+
+\begin{Q}[Google]{http://www.mitbbs.com/article_t/JobHunting/32203533.html}
+一个sensor network有很多sensors, 一个server定期query每个sensor的值。sensor may fail。如何让server避免被block。
+\end{Q}
+
+\begin{Q}[Google]{http://www.mitbbs.com/article_t/JobHunting/32203533.html}
+设计题是一堆机器生成unique ID，这些机器之间不能互相通信，也没有master。
+\end{Q}
+
+\begin{Q}[Microsoft]{http://www.mitbbs.com/article_t/JobHunting/32202393.html}
+Two elements of BST are swapped by mistake. You have to restore the tree without changing its structure.
+\end{Q}
+
+\begin{Q}[Amazon]{http://www.mitbbs.com/article_t1/JobHunting/32205611_0_1.html}
+How to sort 1 million integers with 2MB of memory and with no external storage?
+\end{Q}
+
+\begin{Q}[Apple]{http://www.mitbbs.com/article_t/JobHunting/32205855.html}
+There are three boxes, one contains only apples, one contains only oranges, and one contains both apples and oranges. The boxes have been incorrectly labeled such that no label identifies the actual contents of the box it labels. Opening just one box, and without looking in the box, you take out one piece of fruit. By looking at the fruit, how can you immediately label all of the boxes correctly? 
+\end{Q}
+
+\begin{Q}[Amazon]{http://www.mitbbs.com/article_t/JobHunting/32205129.html}
+如何实现StringBuilder中的insert
+
+\ilcode{public void insert(string str, int index)}
+
+要求就是少用空间，问你要用什么数据结构。
+\end{Q}
+
+\begin{Q}[Facebook]{http://www.mitbbs.com/article_t/JobHunting/32207861.html}
+Write a function that computes $log2()$ using $sqrt()$.
+\end{Q}
+
+\begin{Q}[Google]{http://www.mitbbs.com/article_t/JobHunting/32197465.html}
+An array with n elements which is K most sorted. 就是每个element的初始位置和它最终的排序后的位置的距离不超过常数K,设计一个排序算法。should be faster than $O(n*lgn)$
+\end{Q}
+
+\begin{Q}[Google]{http://www.mitbbs.com/article_t/JobHunting/32197465.html}
+一个排序好的不知道长度的数组，在其中search 一个给定值
+\end{Q}
+
+\begin{Q}[Google]{http://www.mitbbs.com/article_t/JobHunting/32197465.html}
+$1..n$这些数有两个missing,find out which two are missing.
+\end{Q}
+
+\begin{Q}[Facebook]{http://www.mitbbs.com/article_t/JobHunting/32204809.html}
+find number of unique numbers in a stream input of integers. need accurate number if the result is small, need rough number if the result is large.
+\end{Q}
+
+\begin{Q}[Google]{http://www.mitbbs.com/article_t/JobHunting/32205729.html}
+$N * N$ integer矩阵。每一行取一个数, 且取出的每一个数必须不同列。取出$N$个数使得其sum最小. 求取法。
+\end{Q}
+
+\begin{Q}[Google]{http://www.mitbbs.com/article_t/JobHunting/32210665.html}
+If there is an tree structure data, design an algorithm for function \ilcode{next()} which returns one data each time and this function will access all the data only once.
+\end{Q}
+
+\begin{Q}[Google]{http://www.mitbbs.com/article_t/JobHunting/32206157.html}
+Given two sorted array, return the intersection part. follow-up: test cases ?
+\end{Q}
+
+\begin{Q}[Google]{http://www.mitbbs.com/article_t/JobHunting/32206157.html}
+Suppose we are building a web browser that tell the user if a URL is malware. Given a URL and a URL malware list, determine if the URL exists in the malware list.
+
+1st follow-up question: what if the malware list is so big (2GB) that can't fits in the memory of the user's computer? 
+
+2nd follow-up: what if the  malware list is so big (2TB) that have to store on the server-side?
+\end{Q}
+
+\begin{Q}[Facebook]{http://www.mitbbs.com/article_t/JobHunting/32212121.html}
+print all path from root to leaf nodes
+\end{Q}
+
+\begin{Q}[Facebook]{http://www.mitbbs.com/article_t/JobHunting/32212121.html}
+calcualte int Power(int x, int y), extend to calculate double Power(double x, double y)
+\end{Q}
+
+\begin{Q}[Linkedin]{http://www.mitbbs.com/article_t/JobHunting/32219391.html}
+Reverse postfix order
+\end{Q}
+
+\begin{Q}[Google]{http://www.mitbbs.com/article_t/JobHunting/32221085.html}
+在一个$n*n$的字符矩阵上,问有多少个有效的字符串.一个有效的字符串可以从矩阵中任何一个字符开始,到任何一个字符结束.下一个字符是上一个字符8个相邻字符中的一个.而且字符不能重复使用.
+\end{Q}
+
+\begin{Q}{http://www.mitbbs.com/article_t/JobHunting/32224933.html}
+有一堆螺栓和螺母，每一个螺栓只可能配一个螺母，螺栓与螺栓之间不能比较，螺母与螺母之间也不可以比较，只有螺栓与螺母之间可以比较，配对所有的螺栓和螺母。
+\end{Q}
+
+\begin{Q}[Google]{http://www.mitbbs.com/article_t/JobHunting/32224635.html}
+假设有一很长的数字，比如$11224444$，被压缩存储为pairs，如$(1, 2)$, $(2, 2)$, $(4, 4)$.然后写个Iterator，要求有constructor(to take pairs as input)，\ilcode{next()} to give out the digit and move to the next position, \ilcode{hasNext()} to indicate if there's any more digit left.
+\end{Q}
+
+\begin{Q}[Amazon]{http://www.mitbbs.com/article_t/JobHunting/32222805.html}
+手机键盘位设计，用户输入数字，随时跳出Popup的菜单查询的单词. 打一个c，就输出所有名字c开头的record，打一个ca，就输出所有名字ca开头的.
+\end{Q}
+
+\begin{Q}[Amazon]{http://www.mitbbs.com/article_t/JobHunting/32225593.html}
+3维空间有若干个点，求一平面包含最多的点。
+\end{Q}
+
+\begin{Q}[Google]{http://www.mitbbs.com/article_t/JobHunting/32226949.html}
+Partition a set of numbers into two such that difference between their sum is minimum, and both sets have equal number of elements.
+
+For example: $[1, 4, 9, 16]$ is partitioned as $[1,16]$ and $[4,9]$ with diff: $17-13=4$.
+\end{Q}
+
+\begin{Q}{http://www.mitbbs.com/article_t/JobHunting/32227979.html}
+从$n$个无重复正整数的数组里选$m$个数，要求这$m$个数的总和是$<=S$的最大解。
+
+比如从$[1,3,9,15]$选 $m=2$个,$<=13$, 答案就是$[3,9]$。如果$<=10$,答案就是$[1,9]$
+\end{Q}
+
+\begin{Q}[Amazon]{http://www.mitbbs.com/article_t/JobHunting/32229453.html}
+Write a function to find the first share node for two linked list
+\end{Q}
+
+\begin{Q}[Amazon]{http://www.mitbbs.com/article_t/JobHunting/32228745.html}
+问给一个set，比如1122334，其中只有一个数字出现奇数次，其余均为偶数次，如何找出该数
+
+如果有两个数出现奇数次，怎么找
+\end{Q}
+
+\begin{Q}[Amazon]{http://www.mitbbs.com/article_t/JobHunting/32280389.html}
+从字符串里找出重复奇数次的字符。
+
+比如  abaadefbe  -->adf (顺序不限）
+\end{Q}
+
+\begin{Q}[Google]{http://www.mitbbs.com/article_t/JobHunting/32230483.html}
+Write a program to determine whether $n/2$ distintinctve pairs can be formed from given $n$ integers where $n$ is even and each pair's sum is divisible by given $k$. Numbers cannot be repeated in the pairs, that means you can only form total $n/2$ pairs.
+\end{Q}
+
+\begin{Q}[Google]{http://www.mitbbs.com/article_t/JobHunting/32233741.html}
+You are given the source to a application which is crashing when run. After running it 10 times in a debugger, you find it never crashes in the same place. The application is single threaded, and uses only the C standard library. What programming errors could be causing this crash? How would you test each one?
+\end{Q}
+
+\begin{Q}[Google]{http://www.mitbbs.com/article_t/JobHunting/32233741.html}
+How to add a counter to www.google.com to track the billionth user.
+\end{Q}
+
+\begin{Q}[Google]{http://www.mitbbs.com/article_t/JobHunting/32227891.html}
+	\begin{lstlisting}
+		public class person {
+			public int age;
+			public int weight;
+
+			public person(int x, int y) {
+				  age = x;
+				    weight = y;
+			}
+		}
+	\end{lstlisting}
+写一个函数，让person能够被用作hashmap的key。
+\end{Q}
+
+\begin{Q}[Google]{http://www.mitbbs.com/article_t/JobHunting/32224083.html}
+Given an input string and an order string, e.g., ``house'' and ``soup'', print out characters in input string according to character order in the order string. For characters in input string but not in the order string, output them in the end, their relative order doesn't matter. For example, for input string ``house'', ``souhe'' and ``soueh'' are valid outputs.
+\end{Q}
+
+\begin{Q}[Google, Amazon]{http://www.mitbbs.com/article_t/JobHunting/32234437.html}
+一道电面题，让实现随机洗牌算法，然后设计测试，判断是否每种shuffle后的组合都是等可能出现的。
+\end{Q}
+
+\begin{Q}[Google]{http://www.mitbbs.com/article_t/JobHunting/32206313.html}
+一个matrix上， 有$n$个人，这$n$个人要找一个地方开会，问哪个地方让大家移动的距离最近。
+\end{Q}
+
+\begin{Q}[Google]{http://www.mitbbs.com/article_t/JobHunting/32229821.html}
+You are going to work with “bigNums”, which are objects containing a positive integer with an unlimited number of decimal digits.
+
+a) declare a struct to represent “bigNums”
+
+b) write a function that takes as arguments a bigNum and a positive integer between 0 and 9, adds them and returns the answer (a bigNum)
+\end{Q}
+
+\begin{Q}[Google]{http://www.mitbbs.com/article_t/JobHunting/32229821.html}
+You are given two very large files of unsigned 64 bit integers. Write to an output file all the numbers that appear in both files, but there should be no duplicates in the output file 
+\end{Q}
+
+\begin{Q}[Amazon]{http://www.mitbbs.com/article_t/JobHunting/32241209.html}
+一数组: $[2, 3, 4, 5]$要求返回一个数组: $[60, 40, 30, 24]$， 其中每个element是其他元素的乘积。
+\end{Q}
+
+\begin{Q}[Google]{http://www.mitbbs.com/article_t/JobHunting/32241025.html}
+Given random generator \ilcode{rand(int n)}. Now, design a random generator such as \ilcode{rand(int n, int[] except)}
+
+example, $n=10$, random $1-10$, $except[3]=[1,5,6]$, then \ilcode{rand(10, except)} output $[2,3,4, 7, 8, 9,10]$
+\end{Q}
+
+\begin{Q}[Amazon]{http://www.mitbbs.com/article_t/JobHunting/32240607.html}
+在数组中，找重复元素中的最远的距离。
+
+Example: 2 3 2 5 4 3 => 4
+
+两个2的距离是2
+
+两个3的距离是4
+
+所以答案是4
+\end{Q}
+
+\begin{Q}[Twitter]{http://www.mitbbs.com/article_t/JobHunting/32238797.html}
+去注释
+\begin{lstlisting}
+abc//xyz\nwwe*/*sdfsd/*sdfda*/sd*/cvcd  => abc\nwwe*sd*/cvcd
+\end{lstlisting}
+\end{Q}
+
+\begin{Q}[Google]{http://www.mitbbs.com/article_t/JobHunting/32242053.html}
+Find deepest nodes in a binary tree.
+
+Q: binary search tree? A: no
+
+Q: all of the deepest nodes, or just one? A: find the right-most deepest node
+\end{Q}
+
+\begin{Q}[Google]{http://www.mitbbs.com/article_t/JobHunting/32242053.html}
+Suppose you have a dictionary of words. Given a abbreviation like ``i18n'', determine if it is unique in the dictionary.
+
+Q: rephrasing the question, determine if no other words can be abbreviated as ``i18n'', correct? A: yes
+\end{Q}
+
+\begin{Q}[Amazon]{http://www.mitbbs.com/article_t/JobHunting/32061495.html}
+两个1 terabyte的文件，只有一个byte不一样，怎么样可以最有效的找到不同byte的位置
+\end{Q}
+
+\begin{Q}[Google]{http://www.mitbbs.com/article_t/JobHunting/32239977.html}
+设计
+
+\begin{lstlisting}
+class  webcounter {
+	void  increment();
+	int  lastmin();
+	int  lasthour();
+	int  lastday();
+}
+\end{lstlisting}
+\end{Q}
+
+\begin{Q}[Google]{http://www.mitbbs.com/article_t/JobHunting/32239977.html}
+打印函数,奇数行完全打印,偶数行隔一个打印
+\end{Q}
+
+\begin{Q}[Facebook]{http://www.mitbbs.com/article_t/JobHunting/32245159.html}
+Anagram Buckets
+
+Anagram: abc, cba, cab
+
+Input: [abc, def, xyz, fde, fed, cab]
+
+Output: [[abc, cab], [def, fde, fed], [xyz]]
+\end{Q}
+
+\begin{Q}[Microsoft]{http://www.mitbbs.com/article_t/JobHunting/32063647.html}
+reverse each pair of node in singly-linked list
+
+就是1->2->3->4->5
+
+得到2->1->4->3->5
+\end{Q}
+
+\begin{Q}[IXL]{http://www.mitbbs.com/article_t/JobHunting/32247615.html}
+如果n-1 和 n+1 都是 prime number, 证明 n 能够被6 整除。
+\end{Q}
+
+\begin{Q}[Facebook]{http://www.mitbbs.com/article_t/JobHunting/32247449.html}
+You are given $N$ ranges of date offsets when $N$ employees are present in an organization. Something like
+
+1-4 (i.e. employee will come on 1st, 2nd, 3rd and 4th day )
+
+2-6
+
+8-9
+
+..
+
+1-14
+
+You have to organize an event on minimum number of days such that each employee can attend the event at least twice. Write an algorithm (there is apparently an $O(n)$ algorithm for this).
+\end{Q}
+
+\begin{Q}[Amazon]{http://www.mitbbs.com/article_t/JobHunting/32247051.html}
+implement a graph class, including several methods like \ilcode{addNode()}, \ilcode{addEdge()}, etc. Then implement to clone a graph.
+\end{Q}
+
+\begin{Q}[Google]{http://www.mitbbs.com/article_t/JobHunting/32156867.html}
+求一个数字数组里的最大连续数字的个数。
+
+3, 4, 4, 4, 2, 2, 3, 4  =>  return 3
+\end{Q}
+
+\begin{Q}[Google]{http://www.mitbbs.com/article_t/JobHunting/32156867.html}
+两个字符串，第二个字符串是第一个的缺了几个，打印第二个字符串缺了的字符位置。
+
+``abc'',`` ab'' => print  ``2''
+
+``abc'', ``b'' => print ``0 2''
+
+``abc'', ``ac'' => print ``1''
+
+``aab'', ``ab'' =>  print ``0''   OR   print ``1''
+\end{Q}
+
+\begin{Q}[Google]{http://www.mitbbs.com/article_t/JobHunting/32156867.html}
+一个数字数组，给一个window，长度$k$，window从数组头开始往后滑动，每次滑动一个，求每次窗口中的最大值。
+
+3, 4, 5, 7, 3, 5, 2, 9 
+
+$k = 3$
+
+print  ``5 7 7 7 5 9''
+\end{Q}
+
+\begin{Q}[Google]{http://www.mitbbs.com/article_t/JobHunting/32249603.html}
+假设一家utility bill company， 分段收取utility，写程序实现charge。
+\end{Q}
+
+\begin{Q}[Google]{http://www.mitbbs.com/article_t/JobHunting/32249233.html}
+Given three integers a, b,c. Write a function: int median (int a,int b,int c) to get the median number among a,b,c. Can not use sort, the times of integer operations (e.g. compare, + - * /, bit computing) the less the better. Analyze the best and the worst situation. 
+\end{Q}
+
+\begin{Q}[Amazon]{http://www.mitbbs.com/article_t/JobHunting/32252131.html}
+given a list of words (string), let compound word be the combination of any two words in the array, check the numbers of duplicated words (to check if there are duplicated compound words, and if the compound word is the same as some word in the original list, it is also considered as duplicated) 
+
+[``am'', ``eat'', ``a'', ``meat''] ``am''+``eat''=``a''+``meat'' outout =1 
+\end{Q}
+
+\begin{Q}[Amazon]{http://www.mitbbs.com/article_t/JobHunting/32252131.html}
+Design a system for members to borrow books from a library
+\end{Q}
+
+\begin{Q}[Amazon]{http://www.mitbbs.com/article_t/JobHunting/32252019.html}
+newspaper截取letters能否拼出ransom
+\end{Q}
+
+\begin{Q}[Google]{http://www.mitbbs.com/article_t/JobHunting/32233991.html}
+有一种压缩方式，把food->f2d, tea->t1a，这种，然后现在要搞一个dictionary，问如何设计，还要实现判断isUnique方法.
+\end{Q}
+
+\begin{Q}{http://www.mitbbs.com/article_t/JobHunting/32071771.html}
+Longest subarray with equal number of 1 and 0
+\end{Q}
+
+\begin{Q}[Amazon]{http://www.mitbbs.com/article_t/JobHunting/32251141.html}
+给一个string array, 除了一个string出现了奇数次外，其他所有string都出现了偶数次。返回出现奇数次的string。
+\end{Q}
+
+\begin{Q}[Amazon]{http://www.mitbbs.com/article_t/JobHunting/32251141.html}
+一个单链表，返回倒数第N个node
+\end{Q}
+
+\begin{Q}[Google]{http://www.mitbbs.com/article_t/JobHunting/32251521.html}
+Given $N$ node BST, and a key $K$, find $m$ ($m<N$) nodes in tree which are close to key value？
+\end{Q}
+
+\begin{Q}[Amazon]{http://www.mitbbs.com/article_t/JobHunting/32251307.html}
+有两个int的数组，怎么merge他们起来，而且没有duplicate的数字。
+\end{Q}
+
+\begin{Q}{http://www.mitbbs.com/article_t/JobHunting/32257199.html}
+求出10 million以内，所有是palindrome的质数。
+\end{Q}
+
+\begin{Q}[Facebook]{http://www.mitbbs.com/article_t/JobHunting/32256015.html}
+lowest common ancestor in a binary tree.
+\end{Q}
+
+\begin{Q}[Facebook]{http://www.mitbbs.com/article_t/JobHunting/32256565.html}
+Given 2D coordinates , find the k points which are closest to the origin. Propose a data structure for storing the points and the method to get the k points. Also point out the complexity of the code.
+\end{Q}
+
+\begin{Q}[Google]{http://www.mitbbs.com/article_t/JobHunting/32257529.html}
+一个矩阵，比如$m*n$，从一个点可以访问它的八个相邻点（上、下、左、右、左上、左下、右上、右下）
+
+如果一个方向上的点已经被访问过了，则可以继续访问这个方向上的下一个未被访问的点（比如当前点是(5,5)，如果（5,4）已经被访问，则可以访问(5,3)，如果(5,3)也被访问了，则可以访问（5,2）…… 对角线方向的也是如此,(5,5)可以访问(4,4)，如果(4,4)已经被访问，可以访问(3,3)……）
+
+现在需要遍历这个矩阵上的所有点，则有多少种可能性？（起点和终点不限）
+\end{Q}
+
+\begin{Q}[Amazon]{http://www.mitbbs.com/article_t/JobHunting/32249655.html}
+找linkedlist middle node
+\end{Q}
+
+\begin{Q}[Google]{http://www.mitbbs.com/article_t/JobHunting/32260335.html}
+Given a array of integers , find 3 indexes $i,j,k$ such that, $i<j<k$ and $a[i] < a[j] < a[k]$. 
+\end{Q}
+
+\begin{Q}[Palantir]{http://www.mitbbs.com/article_t/JobHunting/32265303.html}
+你有25匹马, 5个lane, 怎么在没有工具的情况下, 最快找出最快的3只
+\end{Q}
+
+\begin{Q}{http://www.mitbbs.com/article_t/JobHunting/32263975.html}
+给你一本其他国家语言的字典。其中的单词是按照这个国家的语言的字母顺序排序的。输出这个国家的语言的字母顺序。
+\end{Q}
+
+\begin{Q}[Amazon]{http://www.mitbbs.com/article_t/JobHunting/32259233.html}
+写一段code，检测一串数字是否是Fabonacci系列。
+\end{Q}
+
+\begin{Q}[Amazon]{http://www.mitbbs.com/article_t/JobHunting/32259233.html}
+给两个ascend排序的integer array，找出他们的union，并且descend排序。
+\end{Q}
+
+\begin{Q}[Google]{http://www.mitbbs.com/article_t/JobHunting/32271035.html}
+实现encode,decode函数encode的参数是字符串的链表, 返回字符串. decode参数是字符串返回字符串链表. 最后\ilcode{list.equals(list.decode(encode(list))}
+\end{Q}
+
+\begin{Q}[Amazon]{http://www.mitbbs.com/article_t/JobHunting/32271789.html}
+给定一个0和1的矩阵，返回连成一片的1的block的个数，只考虑前后左右四个neighbor。
+\end{Q}
+
+\begin{Q}[Google]{http://www.mitbbs.com/article_t/JobHunting/32273209.html}
+假如你的朋友信息用hash表来存储，姓名是key，现在想随机挑选一人。朋友表是动态增减的。
+\end{Q}
+
+\begin{Q}[Google]{http://www.mitbbs.com/article_t/JobHunting/32271053.html}
+一个数组，比如$[1,2,3,7,19,8,6,11,34,23,67]$. Find local min，就是比它左右都小，比如这个里面的6比8,11小，23比34,67小，都是local min。找到任意一个local min就可以
+\end{Q}
+
+\begin{Q}[Microsoft]{http://www.mitbbs.com/article_t/JobHunting/32273501.html}
+写一个int转成链表的函数 链表每个节点存一个digit，要注意表示负数的情况
+\end{Q}
+
+\begin{Q}[Microsoft]{http://www.mitbbs.com/article_t/JobHunting/32273655.html}
+一个M*M的矩阵里，随机放着很多石头，让找最大的空的矩形，并返回位置。
+\end{Q}
+
+\begin{Q}[Google]{http://www.mitbbs.com/article_t/JobHunting/32274397.html}
+Write a function which returns the next palindrome greater than the given number n.
+\end{Q}
+
+\begin{Q}[Google]{http://www.mitbbs.com/article_t/JobHunting/32279127.html}
+数组的值是下次跳的索引位置，数组有环，求最长环的长度.
+\end{Q}
+
+\begin{Q}[Twitter]{http://www.mitbbs.com/article_t/JobHunting/32277677.html}
+Given a matrix with all elements sorted on each individual row and column find the K-th smallest one.
+\end{Q}
+
+\begin{Q}[Facebook]{http://www.mitbbs.com/article_t/JobHunting/32198853.html}
+给一个单向链表,随机选择一个node in one pass
+\end{Q}
+
+\begin{Q}[Amazon]{http://www.mitbbs.com/article_t/JobHunting/32279123.html}
+Sort string a based on the order of the letters in string b.
+\end{Q}
+
+\begin{Q}[Google]{http://www.mitbbs.com/article_t/JobHunting/32281037.html}
+一个特殊的国家忌讳7这个数字，所有包含7的数字他们都不用，改用下一个数字，比如7他们用8代替，17用19代替，给定这个国家的数字，翻译成我们用的数字。
+\end{Q}
+
+\begin{Q}[Google]{http://www.mitbbs.com/article_t/JobHunting/32281281.html}
+bst 给一个数，找出在bst中离这个数最近的节点
+\end{Q}
+
+\begin{Q}[Google]{http://www.mitbbs.com/article_t/JobHunting/32281281.html}
+大数据的平方$X^2$, $X$很长不能用int long 之内的表示
+\end{Q}
+
+\begin{Q}[Google]{http://www.mitbbs.com/article_t/JobHunting/32281281.html}
+给一个很长的bit array，要求reverse，bit array存在byte array中，bytes数很大，
+\end{Q}
+
+\begin{Q}[Google]{http://www.mitbbs.com/article_t/JobHunting/32281281.html}
+bst，分层打印各层最大的节点数值
+\end{Q}
+
+\begin{Q}[Amazon]{http://www.mitbbs.com/article_t/JobHunting/32282115.html}
+给一个字符串，输出一个文件，里面每一行是一个出现的字符，后面跟着它出现的次数。要根据出现次数降序排列。
+\end{Q}
+
+\begin{Q}[Google]{http://www.mitbbs.com/article_t/JobHunting/32282399.html}
+Check if a number power of 3.
+\end{Q}
+
+\begin{Q}[Microsoft]{http://www.mitbbs.com/clubarticle_t/InterviewHackers/31150493.html}
+a file with unknown number of float number, how to sort.
+\end{Q}
+
+\begin{Q}[Amazon]{http://www.mitbbs.com/clubarticle_t/InterviewHackers/31150493.html}
+find first unique character of a string
+\end{Q}
+
+\begin{Q}[Facebook]{http://www.mitbbs.com/clubarticle_t/InterviewHackers/31150493.html}
+Given a function which reads data from a data resource \ilcode{int recv(char *buf, int len)}, implment a function \ilcode{readLine()}; 
+\end{Q}
+
+\begin{Q}[Facebook]{http://www.mitbbs.com/clubarticle_t/InterviewHackers/31150493.html}
+longest increase sequence for an integer list
+\end{Q}
+
+\begin{Q}[Google]{http://www.mitbbs.com/clubarticle_t/Topcoders/31364843.html}
+Given an array with length of $N$, there's a sliding window with length of $K$ ($K <= N$). The window will slide from the beginning to the end, find all the max numbers in the window.
+\end{Q}
+
+\begin{Q}[Google]{http://www.mitbbs.com/clubarticle_t/Topcoders/31342583.html}
+Given an input array $A$ of integers of size $n$, and a query array $B$ of integers of size $m$, find the smallest window of input array that contains all the elements of query array and also in the same order.
+
+例如：
+
+$A = [1,9,3,4,12,13,9,12,21]$
+
+$B = [9,12,21]$
+
+那么应该返回$A[6..8] = [9,12,21]$
+\end{Q}
+
+\begin{Q}[Google]{http://www.mitbbs.com/clubarticle_t/Topcoders/31342599.html}
+一个int，转换成$sign * a * 2 ^ b$的格式。例如： 
+
+$7 = +1 * 7 * 2^0$
+
+$-14 = (-1) * 7 * 2 ^ 1$
+\end{Q}
+
+\begin{Q}[Google]{http://www.mitbbs.com/clubarticle_t/Topcoders/31347555.html}
+一个BST，节点是double，输入一个k，找到和这个k最接近的节点。
+\end{Q}
+
+\end{enumerate}
+\end{CJK}
+\end{document}
