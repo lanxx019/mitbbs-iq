@@ -1,10 +1,11 @@
 all: main
 
-main: questions.pd clean
+main: questions.pdf clean
 
-questions.pd: questions.tex
+questions.pdf: questions.tex
+	rm -rf *.pd
 	pdflatex questions.tex
-	cp questions.pdf questions.pd
+	cp questions.pdf questions-`git rev-parse --short HEAD`.pd
 
 clean:
 	rm -rf *.aux
