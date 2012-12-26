@@ -9,6 +9,7 @@
 \usepackage{hyperref}
 \usepackage{url}
 \usepackage[top=0.75in,bottom=0.75in,left=0.75in,right=0.75in]{geometry}
+\usepackage{tikz}
 
 \NewDocumentEnvironment{Q}{o m}{
 	\item
@@ -444,7 +445,7 @@ unordered array of size $N$, already know more than half of the elements are num
 Given an array, find the longest subarray which the sum of the subarray less or equal then the given MaxSum.
 \end{Q}
 
-\begin{Q}[Facebook]{http://www.mitbbs.com/article_t/JobHunting/32198853.html}
+\begin{Q}[Facebook, Amazon]{http://www.mitbbs.com/article_t/JobHunting/32198853.html}
 写一个二叉树中序遍历的iterator
 \end{Q}
 
@@ -1053,6 +1054,80 @@ Or两个四叉树，树的节点，有两种情况--没有child，有四个child
 
 \begin{Q}[Amazon]{http://www.mitbbs.com/article_t/JobHunting/32071355.html}
 数二进制文件的1的个数
+\end{Q}
+
+\begin{Q}[Amazon]{http://www.mitbbs.com/article_t1/JobHunting/32126949_0_1.html}
+Given a matrix with 0 and 1, return the number of connected component（四向）with edge 1
+
+e.g
+
+1 0 1
+
+1 0 1
+
+0 1 1
+
+return 2
+\end{Q}
+
+\begin{Q}[Amazon]{http://www.mitbbs.com/article_t1/JobHunting/32126949_0_1.html}
+a bunch of bars on table, two players, each one could only take n(n = 1, 2, 3) bars at one time, the loser is the one taking the last bar. If you play first, figure out the strategy to make sure you could win
+\end{Q}
+
+\begin{Q}[Amazon]{http://www.mitbbs.com/article_t/JobHunting/32119043.html}
+一个很简单的函数 如果能被5整除输出buzz，能被3整除输出fizz，同时能被这两个数整除输出fizzbuzz，如果都不能被这两个数整除输出这个数。
+\end{Q}
+
+\begin{Q}[Amazon]{http://www.mitbbs.com/article_t/JobHunting/32149793.html}
+有一个大的catalog，总共有500 Million个entry，每个entry内容是 （ID， document），每个document大小约10KB，不同的ID对应的document可能相同，怎样设计一个程序，对每个给定的一个ID，找出与该ID对应着相同的document的所有其他ID。Follow Up: 如果每台机器内存只有1GB，硬盘100GB，怎么做
+\end{Q}
+
+\begin{Q}[Amazon]{http://www.mitbbs.com/article_t/JobHunting/32115945.html}
+Given a logfile:
+
+a A
+
+b B
+
+a B
+
+c E
+
+a C
+
+where left column is user ID, right column is page ID. Find the most frequent pattern of 3 consecutive page visits of all the users.
+\end{Q}
+
+\begin{Q}[Amazon]{http://www.mitbbs.com/article_t/JobHunting/32162663.html}
+给你一个二叉树，除了最后一行全都是满的，最后一行可能是满的也可能不是满的。逆时针打印这个二叉树的最外面一圈。比如：
+
+\begin{tikzpicture}[
+	level distance=1cm,
+	level 1/.style={sibling distance=5cm},
+	level 2/.style={sibling distance=3cm},
+	level 3/.style={sibling distance=1.5cm}
+]
+\node {苹果}
+	child {node {梨}
+		child {node {桃子}
+			child {node {勺子}}
+			child {node {镜子}}
+		}
+		child {node {李子}
+			child {node {盘子}}
+			child {node {刀子}}
+		}
+	}
+	child {node {番茄}
+		child {node {茄子}
+			child {node {傻子}}
+		}
+		child {node {筷子}}
+	}
+;
+\end{tikzpicture}
+
+结果是 苹果-梨-桃子-勺子-镜子-盘子-刀子-傻子-茄子-筷子-番茄
 \end{Q}
 
 \end{enumerate}
