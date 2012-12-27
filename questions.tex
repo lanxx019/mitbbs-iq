@@ -1130,6 +1130,29 @@ where left column is user ID, right column is page ID. Find the most frequent pa
 结果是 苹果-梨-桃子-勺子-镜子-盘子-刀子-傻子-茄子-筷子-番茄
 \end{Q}
 
+\begin{Q}[Microsoft]{http://www.mitbbs.com/article_t/JobHunting/32291111.html}
+BT树结构, 中间节点是算数运算符(只有+ - * / 4种操作), 叶节点是数字, 要求给出算数表达式 (要求没有冗余括号)，比如：
+
+\begin{tikzpicture}[
+	level distance=1cm,
+	level 1/.style={sibling distance=3cm},
+	level 2/.style={sibling distance=1.5cm}
+]
+\node {*}
+	child {node {+}
+		child {node {1}}
+		child {node {2}}
+	}
+	child {node {*}
+		child {node {4}}
+		child {node {5}}
+	}
+;
+\end{tikzpicture}
+
+表达式 = $(1 + 2) * 4 * 5$, 不能是$(1+2)*(4*5)$
+\end{Q}
+
 \end{enumerate}
 \end{CJK}
 \end{document}
