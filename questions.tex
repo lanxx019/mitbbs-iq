@@ -1193,6 +1193,97 @@ a set of intervals, how to tell if a given value is in any of the intervals
 写一个程序，模拟投硬币的过程，每次投硬币，直到出现正面为止，返回之前出现反面的次数。重复N次上述的过程，问一共出现多少次反面
 \end{Q}
 
+\begin{Q}[Google]{http://www.mitbbs.com/article_t/JobHunting/32064283.html}
+$10^9$个star，亮度为double类型，找出前一千个最亮的
+\end{Q}
+
+\begin{Q}[Google]{http://www.mitbbs.com/article_t/JobHunting/32067247.html}
+给三个数组，怎么穷举所有的组合。。。比如$arr1=[a,b]$, $arr2=[3,4,5]$, $arr3=[true, false]$。如果不是三个，不确定个数的数组怎么穷举。
+\end{Q}
+
+\begin{Q}[Google]{http://www.mitbbs.com/article_t/JobHunting/32079701.html}
+Design and implement a class to train from a input string like ``ape apple ace'' to generate new words based on conditional probability of $P(c_i|c_j)$. e.g., $P(p|a)$, $P(e|p)$, $P(l|p)$.
+
+\begin{lstlisting}
+class TokenGenerator {
+	public void train(String t) {\ldots}
+	public String generate() {\ldots}
+}
+\end{lstlisting}
+
+How to optimize \ilcode{generate()} method.
+\end{Q}
+
+\begin{Q}[Google]{http://www.mitbbs.com/article_t/JobHunting/32107851.html}
+两个BST，求他们merge后的BST。
+\end{Q}
+
+\begin{Q}[Google]{http://www.mitbbs.com/article_t/JobHunting/32128895.html}
+有一個map的interface，要實現\ilcode{get()}, \ilcode{put()}, \ilcode{remove()}, \ilcode{getRandom()}。
+\end{Q}
+
+\begin{Q}[Google]{http://www.mitbbs.com/article_t/JobHunting/32119891.html}
+About Inheritance and polymiorphism. A class, like LinkedList in Java, has two methods \ilcode{add()} and \ilcode{addall()}. Write a subclass to count how many times \ilcode{add()} is called. 
+\end{Q}
+
+\begin{Q}[Google]{http://www.mitbbs.com/article_t/JobHunting/32175265.html}
+一个游戏，叫做“生或死” a.k.a. Game of Life，在一个棋盘上，规则如下：每格有两种状态：生，或者死
+
+每一轮，如果有少于两个邻居是活着的，这格就死掉
+
+如果刚好有两个邻居活着，这格保持原有状态
+
+如果有三个邻居或者，这格可以重生，就是如果原来是死的，现在活过来了
+
+如果有三个以上邻居，这格就被挤死了
+\end{Q}
+
+\begin{Q}[Google]{http://www.mitbbs.com/article_t1/JobHunting/32195653_0_1.html}
+写一个类是timer的东西， 例如给个数值t和函数，等t时间之后call 这个函数。（然后问有多个这些如果支持多次调用怎么办，有哪些问题之类的）
+\end{Q}
+
+\begin{Q}[Google]{http://www.mitbbs.com/article_t1/JobHunting/32195653_0_1.html}
+二个人轮流打枪的问题算概率， 就是6发装弹夹里面有一颗子弹。然后轮流对照自己头打，然后在shuffle对方接着打。
+\end{Q}
+
+\begin{Q}[Google]{http://www.mitbbs.com/article_t1/JobHunting/32195653_0_1.html}
+写个函数输入7张牌，然后输出是否有同花顺，顺子，和同花。 
+\end{Q}
+
+\begin{Q}[Google]{http://www.mitbbs.com/article_t1/JobHunting/32195653_0_1.html}
+一个billion of urls, 然后让你输出最长的相同的prefix，包含这个prefix url必须占$75\%$以上。
+\end{Q}
+
+\begin{Q}[Google]{http://www.mitbbs.com/article_t/JobHunting/32224635.html}
+假设有一很长的数字，比如11224444,被压缩存储为pairs，如(1, 2), (2, 2), (4, 4).然后让我写个Iterator，要求有\ilcode{constructor()}，\ilcode{next()} to give out the digit and move to the next position, \ilcode{hasNext()} to indicate if there's any more digit left.
+\end{Q}
+
+\begin{Q}[Google]{http://www.mitbbs.com/article_t/JobHunting/32262719.html}
+两个不知长度的 int 数组，实现相加
+\end{Q}
+
+\begin{Q}[Google]{http://www.mitbbs.com/article_t/JobHunting/32279127.html}
+给个数组，打乱了，比如
+
+索引 0 1 2 3 4
+
+值   3 2 1 4 0
+
+数组的值是下次跳的索引位置，这样的话数组有环，比如 0->3->4->0->1->2->1，求最长环的长度.
+\end{Q}
+
+\begin{Q}[Google]{http://www.mitbbs.com/article_t/JobHunting/32281037.html}
+给两个同样长度排序好的数组，找第K个最小的数。扩展，给两个很长的数组，给定其中一个数，找离这个数距离最短的第K个数。
+\end{Q}
+
+\begin{Q}[Google]{http://www.mitbbs.com/article_t/JobHunting/32281281.html}
+大数据的平方$X^2$，X很长，不能用int，long 之内的表示
+\end{Q}
+
+\begin{Q}[Google]{http://www.mitbbs.com/article_t/JobHunting/32282399.html}
+check if a number power of 3.
+\end{Q}
+
 \end{enumerate}
 \end{CJK}
 \end{document}
