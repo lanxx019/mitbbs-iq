@@ -1177,6 +1177,14 @@ Implement LRU(least recently used) cache.
 OO design来表示formula，比如$1+2*3$. 要求有\ilcode{calculate()}和\ilcode{tostring()}函数。
 \end{Q}
 
+\begin{Q}[Amazon]{http://www.mitbbs.com/article_t1/JobHunting/32292525_0_1.html}
+An operation ``swap'' means removing an element from the array and appending it at the back of the same array. Find the minimum number of ``swaps'' needed to sort that array.
+
+Eg: 3124
+
+Output: 2 (3124->1243->1234)
+\end{Q}
+
 \begin{Q}[Google]{http://www.mitbbs.com/article_t/JobHunting/32026405.html}
 有个封装好的函数\ilcode{int blockRead(char[] buf)}。内部有个静态文件指针，只能向文件末尾移动，不能rewind每次只能读取4K的block到buf里，返回读取的字节数（除非到文件尾，否则总是4K）要求实现\ilcode{int anySizeRead(char[] buf, int size)}从文件的当前位置读取任意大小的数据存入buf，并返回实际读到的数据字节数
 \end{Q}
