@@ -1626,6 +1626,54 @@ Implement function: \ilcode{List<String> getLonelyCelebrity(Set<String> names)}.
 You got $2^{40}$ positive 4 byte integers on disk, 16M memory, how to find the first missing integer.
 \end{Q}
 
+\begin{Q}[Google]{http://www.mitbbs.com/article_t/JobHunting/32078587.html}
+现在有一个容器的iterator,支持\ilcode{bool hasNext ()}是否还有元素,\ilcode{T next ()}取出下个元素，并迭代器后移.现在要你写一个wrapper类:
+
+\begin{lstlisting}
+class wrapper {
+   wrapper (iterator it);
+   bool hasNext ()
+   T next ()
+   T peek ()
+}
+\end{lstlisting}
+\end{Q}
+
+\begin{Q}[Rocket Fuel]{http://www.mitbbs.com/article_t/JobHunting/32402829.html}
+给一个unsigned int数组，size为$n$，数组的$sum = a$，计算一个$k$的值，将数组中所有大于$k$的数改为$k$之后，数组的sum变为$b$。Ex, $[1,2,5,7,7,8] = a = 30$, $b = 26$, 那么$k = 6$，因为$[1,2,5,6,6,6] = 26$。要求时间复杂度是$n*logn$.
+\end{Q}
+
+\begin{Q}[Rocket Fuel]{http://www.mitbbs.com/article_t/JobHunting/32402829.html}
+给一张$L*W$的纸，给一堆$l(i)* w(i)$的模板，每个size的模板有各自的price $p(i)$，求这张纸所能剪出的最大值。
+\end{Q}
+
+\begin{Q}[Facebook]{http://www.mitbbs.com/article_t/JobHunting/32416381.html}
+Question: For some $N$, print all the solutions of $A * B = C * D$ where $A, B, C, D$ are all $1$ -- $N$.
+\end{Q}
+
+\begin{Q}[Facebook]{http://www.mitbbs.com/article_t/JobHunting/32407699.html}
+输出count最多的连续的字符。
+
+\begin{lstlisting}
+"this is a sentence" => [t, h, i, s, i, s, a, s, e, n, t, e, n, c, e]
+"thiis iss a senntencee" => [i, s, n, e]
+"thiisss iss a senntttenceee" => [s, t, e]
+"thiisss iss a sennnntttenceee" => [n]
+\end{lstlisting}
+\end{Q}
+
+\begin{Q}[Facebook]{http://www.mitbbs.com/article_t/JobHunting/32394795.html}
+Sort a linked list in $O(nlog(n))$ time with $o(1)$ space complexity. Recursion doesn't work here.
+\end{Q}
+
+\begin{Q}[Facebook]{http://www.mitbbs.com/article_t/JobHunting/32394795.html}
+Given 3 integer arrays, find an item from each array s.t. $a+b+c=0$ in $O(nlog(n))$ time
+\end{Q}
+
+\begin{Q}[Google]{http://www.mitbbs.com/article_t/JobHunting/32113349.html}
+处理一个字符串，删除里面所有的A，double所有的B要求in space , $O(1)$, no extra memory cost, 字符串处理变长的空间不算。例子，输入CAABD, 输出是CBBD
+\end{Q}
+
 \end{enumerate}
 \end{CJK}
 \end{document}
