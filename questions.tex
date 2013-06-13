@@ -1745,6 +1745,29 @@ Write code to compute the shortest unique prefix of each word in a set of words.
 最长连续上升子串，给定字符串，输出最长连续上升子串的起始点和长度.
 \end{Q}
 
+\begin{Q}[Google]{http://www.mitbbs.com/article_t/JobHunting/32455493.html}
+回到1980年代，一台计算机内存1KB, 主频 1MHz, 设计一个在这台机器上跑的时间最长(但能确定会正常结束)的程序，证明为什么是最长，并计算时长。
+\end{Q}
+
+\begin{Q}[10gen]{http://www.mitbbs.com/article_t/JobHunting/32455661.html}
+给一个interface：
+
+\begin{lstlisting}
+public interface Stream {
+    int getNext();
+}
+\end{lstlisting}
+
+Stream都是infinite的。getNext()永远return一个比上次return的值还要大或者相等的int。让你实现一个class：
+
+\begin{lstlisting}
+public class MergeStream implements Stream {
+}
+\end{lstlisting}
+
+要求这个class在constructor里面accept一个array的Stream，然后同时实现getNext() method，也要永远返回比上一次大或者相等的int。最后问了如果有N个Stream，然后getNext被用了K次的话，复杂度是个什么情况。
+\end{Q}
+
 \end{enumerate}
 \end{CJK}
 \end{document}
