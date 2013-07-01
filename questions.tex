@@ -1768,6 +1768,75 @@ public class MergeStream implements Stream {
 要求这个class在constructor里面accept一个array的Stream，然后同时实现getNext() method，也要永远返回比上一次大或者相等的int。最后问了如果有N个Stream，然后getNext被用了K次的话，复杂度是个什么情况。
 \end{Q}
 
+\begin{Q}[Google]{http://www.mitbbs.com/article_t/JobHunting/32184907.html}
+Given an array of integers where each element points to the index of the next element how would you detect if there is a cycle in this array?
+\end{Q}
+
+\begin{Q}[Google]{http://www.mitbbs.com/article_t/JobHunting/32466847.html}
+A binary search tree is given. Find the ceiling value present in the BST of a given key. eg:
+
+\begin{tikzpicture}[
+	level distance=1cm,
+	level 1/.style={sibling distance=5cm},
+	level 2/.style={sibling distance=3cm},
+	level 3/.style={sibling distance=1.5cm}
+]
+\node {8}
+	child {node {3}
+		child {node {2}}
+		child {node {6}
+			child {node {4}}
+		}
+	}
+	child {node {12}
+		child {node {10}}
+		child {node {15}}
+	}
+;
+\end{tikzpicture}
+
+key - 13 => 15 
+
+key - 4 => 6 
+
+key - 8 => 10
+
+\end{Q}
+
+\begin{Q}[Facebook]{http://www.mitbbs.com/article_t/JobHunting/32469031.html}
+given an array, find out the max sum of a set that each elements are non-ajacent.
+\end{Q}
+
+\begin{Q}[Facebook]{http://www.mitbbs.com/article_t/JobHunting/32429075.html}
+给一堆F的用户，以及朋友关系，朋友之间的关系是双向的。问能否将朋友的关系图分成两个partition。使得任何有直接朋友关系的两个人必须处在不同的partition里。
+\end{Q}
+
+\begin{Q}[Facebook]{http://www.mitbbs.com/article_t/JobHunting/32429075.html}
+三个数组，从三个数组各取一数，找出和为某个值的组合
+\end{Q}
+
+\begin{Q}[Facebook]{http://www.mitbbs.com/article_t/JobHunting/32429075.html}
+平面上一堆点，找出四个点，使得四边形面积最大。问题简化成找三个点，使得三角形面积最大。
+\end{Q}
+
+\begin{Q}[Pinterest]{http://www.mitbbs.com/article_t/JobHunting/32295631.html}
+给一组字符串，找最长的公共前缀，至少两个字符串公共
+\end{Q}
+
+\begin{Q}[Pinterest]{http://www.mitbbs.com/article_t/JobHunting/32295631.html}
+给一个数组和一个位置，从该位置起左右jump，检测能否jump到值为0的位置
+
+\ilcode{canJump(int a[], int pos)}
+\end{Q}
+
+\begin{Q}[Facebook]{http://www.mitbbs.com/article_t/JobHunting/32468029.html}
+一个链表1->2->3->4->5转换成1->5->2->4->3
+\end{Q}
+
+\begin{Q}[Yelp]{http://www.mitbbs.com/article_t/JobHunting/32466727.html}
+给定一些字母和一个字典，找这些字母能组成的所有的词,如何scale
+\end{Q}
+
 \end{enumerate}
 \end{CJK}
 \end{document}
